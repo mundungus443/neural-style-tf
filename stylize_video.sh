@@ -82,7 +82,7 @@ python neural_style.py --video \
 
 # Create video from output images.
 echo "Converting image sequence to video.  This should be quick..."
-$FFMPEG -v quiet -i ./video_output/frame_%04d.ppm ./video_output/${content_filename}-stylized.$extension
+$FFMPEG -v quiet -r 60 -i ./video_output/frame_%04d.ppm -c:v libx264 -pix_fmt yuv420p ./video_output/${content_filename}-stylized.$extension
 
 # Clean up garbage
 if [ -d "${temp_dir}" ]; then
