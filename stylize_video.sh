@@ -65,10 +65,10 @@ else
 fi
 num_frames=$(find "$temp_dir" -iname "*.ppm" | wc -l)
 
-echo "Computing optical flow [CPU]. This will take a while..."
-cd ./video_input
-bash make-opt-flow.sh ${content_filename}/frame_%04d.ppm ${content_filename}
-cd ..
+#echo "Computing optical flow [CPU]. This will take a while..."
+#cd ./video_input
+#bash make-opt-flow.sh ${content_filename}/frame_%04d.ppm ${content_filename}
+#cd ..
 
 echo "Rendering stylized video frames [CPU & GPU]. This will take a while..."
 python neural_style.py --video \
@@ -77,6 +77,7 @@ python neural_style.py --video \
 --style_imgs "${style_filename}" \
 --end_frame "${num_frames}" \
 --max_size "${max_size}" \
+--original_colors \
 --verbose;
 
 # Create video from output images.

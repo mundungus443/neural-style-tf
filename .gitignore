@@ -1,0 +1,7 @@
+image_output/
+video_output/
+video_input/
+!video_input/deepflow2-static
+!video_input/deepmatching-static
+!make-opt-flow.sh
+!run-deepflow.sh
