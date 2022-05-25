@@ -1,3 +1,8 @@
+# DO NOT USE THIS
+# IT IS NOT SETUP FOR GENERAL PURPOSE USE
+
+
+
 # neural-style-tf
 
 This is a TensorFlow implementation of several techniques described in the papers: 
