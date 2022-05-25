@@ -5,5 +5,7 @@ video_input/*
 !video_input/deepmatching-static
 !video_input/make-opt-flow.sh
 !video_input/run-deepflow.sh
+!video_input/clip2_720p60.mp4
+!video_input/clip2_1920p60.mp4
 !video_output/make-video.sh
 
